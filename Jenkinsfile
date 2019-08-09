@@ -17,7 +17,7 @@ pipeline {
         }
         stage('Create artifact copy') {
             steps {
-                sh 'cp target/resource-*.jar target/resource.jar'
+                sh 'cp src/main/java/resource-*.jar target/resource.jar'
             }
         }
         
