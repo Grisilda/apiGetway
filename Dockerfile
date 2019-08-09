@@ -1,4 +1,4 @@
-FROM openjdk:8
-ADD target/docker-spring-boot.jar
+FROM openjdk
+COPY src/main/java/resource/*.java target/resource.java'
+ENTRYPOINT ["java", "-jar", "target/demo.jar"]
 EXPOSE 8080
-ENTRYPOINT ["java", "-jar", "docker-spring-boot.jar"]
