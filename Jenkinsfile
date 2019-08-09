@@ -23,7 +23,7 @@ pipeline {
         
         stage('Create Docker Image') {
             steps {
-                sh 'sudo docker build -t resource_image .'
+                sh ' docker build -t resource_image .'
             }
         }
         stage('Run Container') {
