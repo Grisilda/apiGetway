@@ -23,12 +23,12 @@ pipeline {
         
         stage('Create Docker Image') {
             steps {
-                sh 'docker build -t resource_image .'
+                sh 'sudo docker build -t resource_image .'
             }
         }
         stage('Run Container') {
             steps {              
-                sh 'docker run -d -p 8081:8080 --name demoServer resource_image'           
+                sh 'sudo docker run -d -p 8081:8080 --name demoServer resource_image'           
             }
         }
     }
